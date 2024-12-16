@@ -6,11 +6,14 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   container: {
+    backgroundColor: '#fff',
+    flex: 1,
+  },
+  shoppingContainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
-    backgroundColor: '#fff',
   },
   headerStyle: {
     top: 0,
@@ -30,12 +33,16 @@ const styles = StyleSheet.create({
     padding: 10,
     margin: 5,
     borderRadius: 5,
+    elevation: 2,
   },
   productList: {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
+  },
+  purchaseButton: {
+    marginTop: 15,
   },
 });
 
