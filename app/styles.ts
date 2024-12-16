@@ -25,6 +25,18 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
+  productItem: {
+    backgroundColor: "#F2F0EF",
+    padding: 10,
+    margin: 5,
+    borderRadius: 5,
+  },
+  productList: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+  },
 });
 
 export default styles;
