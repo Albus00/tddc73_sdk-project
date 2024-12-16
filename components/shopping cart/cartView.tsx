@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, FlatList, Button, StyleSheet, StatusBar } from 'react-native';
+import { View, Text, FlatList, Button, StyleSheet, StatusBar, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { CartItem } from './cart';
 
 type Props = {
@@ -10,10 +11,12 @@ type Props = {
 const CartView = (props: Props) => {
 
   const renderItem = ({ item }: { item: { id: string, name: string, price: number } }) => (
-    <View style={styles.item}>
-      <Text>{item.name}</Text>
+    <View style={[styles.item, { alignItems: 'center' }]}>
+      <Text style={{ flex: 1 }}>{item.name}</Text>
       <Text>${item.price}</Text>
-      <Button title="Remove" onPress={() => props.removeItem(item.id)} />
+      <TouchableOpacity style={styles.removeButton} onPress={() => props.removeItem(item.id)}>
+        <Ionicons name="trash" size={18} color="white" />
+      </TouchableOpacity>
     </View>
   );
 
@@ -56,10 +59,17 @@ const styles = StyleSheet.create({
   },
   item: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
     padding: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
+    gap: 5,
+  },
+  removeButton: {
+    margin: 5,
+    backgroundColor: 'red',
+    padding: 5,
+    borderRadius: 5,
   },
 });
 
