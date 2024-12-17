@@ -38,7 +38,7 @@ export default function Index() {
               { id: randomId(), name: 'Animal Crossing', price: 49 },
               { id: randomId(), name: 'Pokemon Arceus', price: 39 },
             ].map((product, index) => (
-              <View key={product.id} style={[styles.productItem, { width: '70%' }]}>
+              <View key={product.id} style={[styles.productItem, { width: '46%' }]}>
                 <Text style={{ fontSize: 16, textAlign: 'center' }}>{product.name}</Text>
                 <View style={styles.purchaseButton}>
                   <Button

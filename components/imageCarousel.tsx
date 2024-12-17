@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
   image: {
     aspectRatio: 16 / 9,
     width,
+    height: 'auto',
     resizeMode: 'contain',
   },
   indicatorContainer: {

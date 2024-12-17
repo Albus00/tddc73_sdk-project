@@ -30,6 +30,11 @@ const CartView = (props: Props) => {
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />
+      <View style={{ marginTop: 20 }}>
+        <Text style={{ textAlign: 'center', fontSize: 18 }}>
+          Total: ${props.items.reduce((sum, item) => sum + item.price, 0).toFixed(2)}
+        </Text>
+      </View>
     </View>
   );
 };
